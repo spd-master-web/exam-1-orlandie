@@ -15,17 +15,31 @@ body {
 
 h1 {
   text-transform: uppercase;
+  font-size: 50px;
 }
 
 h2 {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 25px;
+  margin: 0;
 }
 
 .icon {
-  max-width: 40px;
- 
+  max-width: 60px;
+}
+
+header {
+  min-height: 60vh;
+
+  background-color: rgb(255, 68, 0);
+  min-height: 90vh;
+  padding: 50px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
@@ -36,16 +50,26 @@ nav {
   top: 0;
   z-index: 1;
   
-  background-color: orangered;
+  background-color: rgb(189, 50, 0);
   color: white;
-  
 }
 
 a {
   color: white;
-  padding: 14px;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff; 
 }
 
+a:hover {
+  color: black;
+  padding: 10px 0px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black; 
+}
 
 nav > ul {
   list-style: none;
@@ -55,11 +79,11 @@ nav > ul {
   justify-content: space-evenly;
   align-items: baseline;
 }
- 
 
 .section_first {
   background-color: black;
-  min-height: 80vh;
+  min-height: 90vh;
+  padding: 50px 0px;
 
   display: flex;
   justify-content: center;
@@ -67,12 +91,21 @@ nav > ul {
 }
 
 .section_first-text {
-  width: 70vh;
+  width: 80vh;
   color: white;
+  z-index: 5;
+}
+
+.tiger_float {
+  max-width: 40vh;
+
+  float: right;
+  
+  margin: 0px 0px 15px 15px;
 }
 
 .section_second {
-  padding-top: 100px;
+  padding: 80px 0px;
 
   display: flex;
   justify-content: center;
@@ -80,14 +113,12 @@ nav > ul {
 }
 
 .list_container {
-  width: 100vh;
+  width: 140vh;
 
   display: flex;
   flex-flow: row wrap;
 
   justify-content: space-between;
-  
-
 }
 
 .list_item {
@@ -104,29 +135,9 @@ nav > ul {
   border-radius: 20px;
 }
 
-/* .list_item-left {
-
-  
-}
-
-.list_item-middle {
-  align-self: center;
-  border: 1px solid black;
-}
-
-.list_item-right {
-  align-self: flex-end;
-  border: 1px solid black;
-} */
-
-
-
-
-
-
-
 .section_third {
-  min-height: 80vh;
+  min-height: 90vh;
+  padding-bottom: 50px;
 
   display: flex;
   justify-content: center;
@@ -134,14 +145,13 @@ nav > ul {
 }
 
 .section_third-text {
-  width: 70vh;
+  width: 80vh;
   color: black;
 }
 
-
-
-
-
+.tiger_img {
+  max-width: 90vh;
+}
 
 footer {
   min-height: 30vh;
@@ -151,5 +161,5 @@ footer {
   flex-direction: column;
   align-items: center;
 
-  background-color: rgb(254, 120, 72);
+  background-color: orangered;
 }
