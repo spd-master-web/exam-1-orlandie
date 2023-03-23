@@ -10,13 +10,14 @@ html {
 body {
   margin: 0;
   
-  background-color: rgb(247, 245, 245);
+  background-color: rgb(239, 239, 239);
 }
 
 h1 {
   text-transform: uppercase;
   font-size: 60px;
   margin: 0;
+  text-align: center;
 }
 
 h2 {
@@ -31,10 +32,9 @@ h2 {
 }
 
 header {
-  min-height: 60vh;
+  width: 100%;
 
-  background-color: rgb(255, 68, 0);
-  min-height: 90vh;
+  min-height: 40vh;
   padding: 50px 0px;
 
   display: flex;
@@ -44,7 +44,6 @@ header {
 }
 
 .intro {
-  color: white;
   font-style: italic;
   margin: 0;
 
@@ -52,6 +51,7 @@ header {
 }
 
 nav {
+  width: 100%;
   height: 70px;
   padding: 10px;
   
@@ -59,14 +59,15 @@ nav {
   top: 0;
   z-index: 1;
   
-  background-color: rgb(189, 50, 0);
+  background-color: rgb(99, 99, 99);
   color: white;
 }
 
 a {
+  display: inline-block;
   color: white;
   text-transform: uppercase;
-  padding: 10px 0px;
+
   text-decoration: none;
   padding-bottom: 5px;
   border-bottom: 1px solid #fff; 
@@ -74,7 +75,7 @@ a {
 
 a:hover {
   color: black;
-  padding: 10px 0px;
+
   text-decoration: none;
   padding-bottom: 5px;
   border-bottom: 1px solid black; 
@@ -90,8 +91,8 @@ nav > ul {
 }
 
 .section_first {
-  background-color: black;
-  min-height: 90vh;
+  background-color: rgb(0, 0, 0);
+  min-width: 70%;
   padding: 50px 0px;
 
   display: flex;
@@ -104,13 +105,19 @@ nav > ul {
   color: white;
   z-index: 5;
 }
-
+/* image container */
 .tiger_float {
-  max-width: 40vh;
-
+  max-width: 300px;
+  
   float: right;
   
   margin: 0px 0px 15px 15px;
+}
+/* image innside the image container */
+.tiger_float img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .section_second {
@@ -122,16 +129,15 @@ nav > ul {
 }
 
 .list_container {
-  width: 140vh;
-
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 
   justify-content: space-between;
 }
 
 .list_item {
   padding: 10px 20px;
+  margin: 5px;
 
   display: flex;
   flex-direction: column;
@@ -145,7 +151,7 @@ nav > ul {
 }
 
 .section_third {
-  min-height: 90vh;
+  min-width: 70%;
   padding-bottom: 50px;
 
   display: flex;
@@ -158,9 +164,9 @@ nav > ul {
   color: black;
 }
 
-.tiger_img {
-  max-width: 90vh;
-}
+.tiger_img img {
+  max-width: 100%;
+} 
 
 footer {
   min-height: 30vh;
@@ -170,5 +176,44 @@ footer {
   flex-direction: column;
   align-items: center;
 
-  background-color: orangered;
+  background-color: rgb(99, 99, 99);
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+  h2 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0;
+  }
+  nav {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+    background-color: rgb(99, 99, 99);
+    color: white;
+  }
+
+  nav > ul {
+    list-style: none;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+
+  footer {
+    background-color: rgb(38, 0, 255);
+  }
 }
